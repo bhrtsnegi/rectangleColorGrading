@@ -1,5 +1,7 @@
 var rect = document.querySelector("#center");
 
+
+//function when mouse will move inside rectangle
 rect.addEventListener("mousemove", function(details){
     var rectangleLocation= rect.getBoundingClientRect();
     var insideRectVal= details.clientX - rectangleLocation.left;
@@ -33,6 +35,8 @@ rect.addEventListener("mousemove", function(details){
     }
 });
 
+
+// function when mouse will leave the rectangle
 rect.addEventListener("mouseleave", function(){
     gsap.to(rect,{
         backgroundColor: "white",
